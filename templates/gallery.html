@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Tugas Bootstrap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/CSS/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#main-nav" data-bs-offset="0">
+    
+    <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div>
+            <h5 class="offcanvas-header">
+                <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>    
+            </h5>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+               <li class="nav-item"><a class="nav-link text-white" href="../templates/index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../templates/about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../templates/skill.html">Skills</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../templates/gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../templates/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg pt-4" id="main-nav">
+        <div class="container">
+            <a class="navbar-brand script-font fs-2" style="color: var(--text-primary);" href="/">Rayhan</a>
+            
+            <div class="d-flex align-items-center ms-auto">
+                <button class="btn btn-sm border rounded-pill p-2 me-3" onclick="toggleTheme()" style="background-color: var(--bg-surface); color: var(--text-primary);">
+                    <i id="theme-icon" class="bi bi-moon-stars-fill"></i>
+                </button>
+                
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i class="bi bi-list fs-1" style="color: var(--text-primary);"></i>
+                </button>
+                
+                <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="../templates/index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../templates/about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../templates/skill.html">Skill</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../templates/gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../templates/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-center py-5 reveal" style="margin-top: 100px;">
+        <div class="container">
+            <h1 class="display-3 typing-text">My Gallery</h1>
+            <p class="lead text-secondary">A collection of moments, experiences, and digital adventures.(also some random pics just for fun)</p>
+        </div>
+    </header>
+
+    <section class="container pb-5 reveal">
+        <div class="row g-4">
+            <!-- Item 7 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="gallery-card shadow-sm">
+                    <div class="gallery-img-wrapper">
+                        <img src="../static/Images/gallery-7.jpg" th:src="@{/Images/gallery-7.jpg}" alt="Speaker session">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="gallery-caption">MC moment</h3>
+                        <p class="gallery-date">Developer Student Club Event</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="gallery-card shadow-sm">
+                    <div class="gallery-img-wrapper">
+                        <img src="../static/Images/gallery-8.jpg" th:src="@{/Images/gallery-8.jpg}" alt="Mirror selfie with character">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="gallery-caption">Moderator</h3>
+                        <p class="gallery-date">DevFest 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="gallery-card shadow-sm">
+                    <div class="gallery-img-wrapper">
+                        <img src="../static/Images/gallery-3.jpg" th:src="@{/Images/gallery-3.jpg}" alt="Outdoor night shot">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="gallery-caption">Random good pics</h3>
+                        <p class="gallery-date">Casual Moments</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="gallery-card shadow-sm">
+                    <div class="gallery-img-wrapper">
+                        <img src="../static/Images/gallery-4.jpg" th:src="@{/Images/gallery-4.jpg}" alt="Jadi Human Compiler">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="gallery-caption">Becoming human Compiler </h3>
+                        <p class="gallery-date">Tech Events</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="gallery-card shadow-sm">
+                    <div class="gallery-img-wrapper">
+                        <img src="../static/Images/gallery-5.jpg" th:src="@{/Images/gallery-5.jpg}" alt="Group photo with map">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="gallery-caption">Lomba BMC</h3>
+                        <p class="gallery-date">Collaborative Moments</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="gallery-card shadow-sm">
+                    <div class="gallery-img-wrapper">
+                        <img src="../static/Images/gallery-6.jpg" th:src="@{/Images/gallery-6.jpg}" alt="Community gathering">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="gallery-caption">1st meeting DSC</h3>
+                        <p class="gallery-date">Building Connections</p>
+                    </div>
+                </div>
+            </div>
+<!-- Item 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="gallery-card shadow-sm">
+                    <div class="gallery-img-wrapper">
+                        <img src="../static/Images/gallery-2.jpg" th:src="@{/Images/gallery-2.jpg}" alt="Wizard in training">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="gallery-caption">Cosplay alakadarnya</h3>
+                        <p class="gallery-date">Cosplay Experience</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Item 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="gallery-card shadow-sm">
+                    <div class="gallery-img-wrapper">
+                        <img src="../static/Images/gallery-1.jpg" th:src="@{/Images/gallery-1.jpg}" alt="Mirror selfie with character">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="gallery-caption">Elysia</h3>
+                        <p class="gallery-date">Halu dikit ngga ngaruh</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-4 mt-5 border-top">
+        <div class="container">
+            <a href="../templates/secret-gallery.html" style="text-decoration: none; color: inherit; cursor: default;">
+                &copy; 2026 Rayhan. All Rights Reserved.
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/JS/script.js" th:src="@{/JS/script.js}"></script>
+</body>
+</html>

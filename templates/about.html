@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Rayhan</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/CSS/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#main-nav" data-bs-offset="0">
+    
+    <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div>
+            <h5 class="offcanvas-header">
+                <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>    
+            </h5>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item"><a class="nav-link text-white" href="../templates/index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../templates/about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../templates/skill.html">Skills</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../templates/gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../templates/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg pt-4" id="main-nav">
+        <div class="container">
+            <a class="navbar-brand script-font fs-2" style="color: var(--text-primary);" href="/">Rayhan</a>
+            
+            <div class="d-flex align-items-center ms-auto">
+                <button class="btn btn-sm border rounded-pill p-2 me-3" onclick="toggleTheme()" style="background-color: var(--bg-surface); color: var(--text-primary);">
+                    <i id="theme-icon" class="bi bi-moon-stars-fill"></i>
+                </button>
+                
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i class="bi bi-list fs-1" style="color: var(--text-primary);"></i>
+                </button>
+                
+                <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="../templates/index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../templates/about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../templates/skill.html">Skill</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../templates/gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../templates/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container" style="padding-top: 100px;">
+        <!-- Hero About Section -->
+        <div class="row align-items-center g-5 mb-5 reveal">
+            <div class="col-lg-5">
+                <div class="gallery-card shadow-lg p-3" style="transform: rotate(-2deg);">
+                    <div class="gallery-img-wrapper" style="aspect-ratio: 1/1;">
+                        <img src="../static/Images/gallery-3.jpg" th:src="@{/Images/gallery-1.jpg}" alt="Rayhan" style="object-position: top;">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <span class="script-font fs-3">Get to know me</span>
+                <h1 class="display-4 mt-2 mb-4 serif-font typing-text">About Me</h1>
+                <p class="lead text-secondary">Halo! Saya Rayhan, seorang Software Engineer yang berfokus pada pengembangan backend dan kepemimpinan komunitas teknologi.</p>
+                <p class="text-secondary">Saya percaya bahwa teknologi harus inklusif dan dapat diakses oleh semua orang. Melalui keterlibatan saya di berbagai komunitas, saya berusaha membantu pengembang muda untuk tumbuh dan berkolaborasi dalam membangun solusi masa depan.</p>
+            </div>
+        </div>
+
+        <!-- Education & Experience Grid -->
+        <div class="row g-4 mb-5 reveal">
+            <div class="col-md-6">
+                <div class="p-4 border rounded-4 bg-surface shadow-sm h-100">
+                    <h3 class="serif-font mb-4"><i class="bi bi-mortarboard me-2"></i> Pendidikan</h3>
+                    <div class="mb-3">
+                        <h5 class="fw-bold mb-1">Universitas Ciputra</h5>
+                        <p class="text-secondary mb-0">Teknik Informatika (Informatics)</p>
+                        <small class="text-muted">2025 - Sekarang</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="p-4 border rounded-4 bg-surface shadow-sm h-100">
+                    <h3 class="serif-font mb-4"><i class="bi bi-briefcase me-2"></i> Pengalaman</h3>
+                    <div class="mb-3 border-start ps-3 border-primary">
+                        <h5 class="fw-bold mb-1">Web Developer</h5>
+                        <p class="text-secondary mb-0">Mendesain dan mengembangkan website untuk kebutuhan bisnis.</p>
+                    </div>
+                    <div class="border-start ps-3 border-primary">
+                        <h5 class="fw-bold mb-1">Community Leader</h5>
+                        <p class="text-secondary mb-0">Mengelola event teknologi dan workshop coding.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Community Section -->
+        <div class="text-center mb-4 reveal">
+            <h2 class="serif-font">Community Involvement</h2>
+        </div>
+        <div class="row g-4 reveal">
+            <!-- GDG Icon -->
+            <div class="col-md-4">
+                <div class="p-4 border rounded-4 shadow-sm text-center h-100" style="background-color: var(--bg-surface);">
+                    <img src="../static/Images/logo-gdg.png" th:src="@{/Images/logo-gdg.png}" alt="GDG Logo" class="img-fluid mb-3" style="max-height: 60px; object-fit: contain;">
+                    <h4 class="serif-font">Google Developer Groups</h4>
+                    <p class="text-secondary small">Member & Contributor</p>
+                </div>
+            </div>
+            
+            <!-- DSC Icon -->
+            <div class="col-md-4">
+                <div class="p-4 border rounded-4 shadow-sm text-center h-100" style="background-color: var(--bg-surface);">
+                    <img src="../static/Images/logo-dsc.jpg" th:src="@{/Images/logo-dsc.jpg}" alt="DSC Logo" class="img-fluid mb-3" style="max-height: 60px; object-fit: contain; border-radius: 50%;">
+                    <h4 class="serif-font">Developer Student Clubs</h4>
+                    <p class="text-secondary small">Core Team</p>
+                </div>
+            </div>
+
+            <!-- UC Icon -->
+            <div class="col-md-4">
+                <div class="p-4 border rounded-4 shadow-sm text-center h-100" style="background-color: var(--bg-surface);">
+                    <img src="../static/Images/logo-uc.png" th:src="@{/Images/logo-uc.png}" alt="UC Logo" class="img-fluid mb-3" style="max-height: 60px; object-fit: contain;">
+                    <h4 class="serif-font">Universitas Ciputra</h4>
+                    <p class="text-secondary small">Informatics Student</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-4 mt-5 border-top">
+        <div class="container">
+            <p class="mb-0 text-secondary">&copy; 2026 Rayhan. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/JS/script.js}" src="../static/JS/script.js"></script>
+</body>
+</html>
